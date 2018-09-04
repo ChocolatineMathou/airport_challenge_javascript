@@ -1,16 +1,20 @@
 describe ('Weather', function() {
   var weather;
 
-  describe('it says', function() {
-    let isStormy = 10
-    it('stormy', function() {
-      expect(weather.isStormy()).toBeFalse()
-    });
+    beforeEach(function() {
+    weather = {
+      isStormy: function() {
 
-    // it('not stormy', function() {
-    //   expect(weather.isStormy()).toBeTrue()
-    //
-    // });
+      }
+
+    };
+
+    spyOn(weather, 'isStormy').and.returnValue(true);
+    dummyWeather = weather.isStormy();
+  });
+
+  it('stormy', function() {
+    expect(dummyWeather).toEqual(true);
   });
 
 });

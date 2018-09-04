@@ -5,6 +5,6 @@ Airport.prototype.land = function(plane) {
   return "Plane has landed";
 };
 
-Airport.prototype.TakeOff = function(plane) {
+Airport.prototype.takeOff = function(plane) {
   return "Plane took off";
 }
