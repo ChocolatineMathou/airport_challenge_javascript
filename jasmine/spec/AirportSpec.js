@@ -1,5 +1,6 @@
 describe ('Airport', function() {
   var airport;
+  var plane;
 
   describe('when not stormy', function() {
 
